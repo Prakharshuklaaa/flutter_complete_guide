@@ -28,30 +28,48 @@ class MyAppState extends State<MyApp> {
 
   var _questions = const [
     {
-      'questionText': 'What\'s your favourite color?',
+      'questionText': 'Are you on any medication? ',
       'answers': [
-        {'text': 'Black', 'score': 10},
-        {'text': 'Red', 'score': 7},
-        {'text': 'Green', 'score': 9},
-        {'text': 'White', 'score': 5},
+        {'text': 'Yes', 'score': 10},
+        {'text': 'No', 'score': 0},
       ],
     },
     {
-      'questionText': 'What\s your favourite animal?',
+      'questionText': 'Were you ever evaluated clinically for stress?',
       'answers': [
-        {'text': 'Dog', 'score': 10},
-        {'text': 'Cat', 'score': 7},
-        {'text': 'Rabbit', 'score': 9},
-        {'text': 'Mouse', 'score': 5},
+        {'text': 'Yes', 'score': 10},
+        {'text': 'No', 'score': 0},
       ],
     },
     {
-      'questionText': 'Who\'s your favourite dish',
+      'questionText': 'Relationship problems?',
       'answers': [
-        {'text': 'chole bhatura', 'score': 10},
-        {'text': 'Dosa', 'score': 7},
-        {'text': 'Veg roll', 'score': 9},
-        {'text': 'idli', 'score': 5},
+        {'text': 'Yes', 'score': 10},
+        {'text': 'No', 'score': 0},
+      ],
+    },
+    {
+      'questionText': 'Trouble with parents?',
+      'answers': [
+        {'text': 'Yes', 'score': 10},
+        {'text': 'No', 'score': 0},
+      ],
+    },
+    {
+      'questionText': 'Lower grades than expected?',
+      'answers': [
+        {'text': 'Yes', 'score': 10},
+        {'text': 'No', 'score': 0},
+      ],
+    },
+    {
+      'questionText':
+          'In the past month, how often have you been upset because of something that happened unexpectedly?',
+      'answers': [
+        {'text': 'Fairly Often', 'score': 10},
+        {'text': 'Very Often', 'score': 7},
+        {'text': 'Sometimes', 'score': 5},
+        {'text': 'Almost Never', 'score': 0},
       ],
     },
   ];
@@ -74,7 +92,7 @@ class MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            'My First App',
+            'Stress Calculator',
             textAlign: TextAlign.center,
           ),
         ),

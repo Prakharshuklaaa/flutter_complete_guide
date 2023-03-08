@@ -9,30 +9,34 @@ class Result extends StatelessWidget {
   String get resultPhrase {
     String resultText;
 
-    if (resultScore <= 20) {
-      resultText = "You have unique Taste";
-    } else if (resultScore <= 25) {
-      resultText = "You have not so unique Taste";
-    } else if (resultScore <= 30) {
-      resultText = "Your Taste is very common";
+    if (resultScore <= 60) {
+      resultText = "Highly Stressed";
+    } else if (resultScore <= 40) {
+      resultText = "Mild Stress";
+    } else if (resultScore <= 20) {
+      resultText = "Stress Free";
     }
     return resultText;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          resultPhrase,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
-          textAlign: TextAlign.center,
-        ),
-        TextButton(
-          child: Text('Restart Quiz!'),
-          onPressed: resetHandler,
-        ),
-      ],
+    return Container(
+      padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
+      alignment: Alignment.center,
+      child: Column(
+        children: [
+          Text(
+            resultPhrase,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
+            textAlign: TextAlign.center,
+          ),
+          TextButton(
+            child: Text('Restart Quiz!', style: TextStyle(fontSize: 25)),
+            onPressed: resetHandler,
+          ),
+        ],
+      ),
     );
   }
 }
